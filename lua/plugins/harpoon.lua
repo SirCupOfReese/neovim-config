@@ -1,8 +1,3 @@
-local configure_harpoon = function()
-	local harpoon = require('harpoon')
-	harpoon:setup()
-end
-
 local create_harpoon_picker = function()
 	local function telescope(files)
 		local paths = {}
@@ -40,10 +35,7 @@ return {
 		'nvim-lua/plenary.nvim',
 		'nvim-telescope/telescope.nvim'
 	},
-	config = function()
-		local harpoon = require('harpoon')
-		harpoon:setup({})
-	end,
+	config = true,
 	keys = {
 		{ '<leader>fh', create_harpoon_picker(), desc = 'Find Harpooned files' },
 		{ '<leader>ha', function() require('harpoon'):list():add() end, desc = 'Harpoon current file' },
