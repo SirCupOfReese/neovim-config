@@ -8,4 +8,4 @@ if theme_config_file then
 end
 
 vim.opt.background = theme_mode
-vim.cmd("colorscheme oxocarbon")
+vim.cmd('colorscheme kanagawa-wave')
